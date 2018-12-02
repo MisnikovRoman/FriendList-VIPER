@@ -10,4 +10,5 @@ import Foundation
 
 protocol IFriendListInteractor {
     var presenter: IFriendListPresenter? { get set }
+    func fetchFriends()
 }

@@ -12,4 +12,5 @@ protocol IFriendListPresenter {
     var view: IFriendListView? { get set }
     var interactor: IFriendListInteractor? { get set }
     var router: IFriendListRouter? { get set }
+    func viewDidLoad()
 }

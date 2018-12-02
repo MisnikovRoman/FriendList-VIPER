@@ -20,6 +20,7 @@
 		CEE83CFD21B4140800607AE0 /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE83CFC21B4140800607AE0 /* FriendListView.swift */; };
 		CEE83CFF21B414B000607AE0 /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE83CFE21B414B000607AE0 /* FriendListPresenter.swift */; };
 		CEE83D0121B415A200607AE0 /* FriendListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE83D0021B415A200607AE0 /* FriendListInteractor.swift */; };
+		CEE83D0321B41FE600607AE0 /* friends.json in Resources */ = {isa = PBXBuildFile; fileRef = CEE83D0221B41FE600607AE0 /* friends.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CEE83CFC21B4140800607AE0 /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		CEE83CFE21B414B000607AE0 /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
 		CEE83D0021B415A200607AE0 /* FriendListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListInteractor.swift; sourceTree = "<group>"; };
+		CEE83D0221B41FE600607AE0 /* friends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friends.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				CEE83CD621B4109400607AE0 /* AppDelegate.swift */,
 				CEE83CDA21B4109400607AE0 /* Main.storyboard */,
+				CEE83D0221B41FE600607AE0 /* friends.json */,
 				CEE83CE921B410C400607AE0 /* Modules */,
 				CEE83CE821B410B300607AE0 /* Supporting files */,
 			);
@@ -213,6 +216,7 @@
 				CEE83CE121B4109600607AE0 /* LaunchScreen.storyboard in Resources */,
 				CEE83CDE21B4109600607AE0 /* Assets.xcassets in Resources */,
 				CEE83CDC21B4109400607AE0 /* Main.storyboard in Resources */,
+				CEE83D0321B41FE600607AE0 /* friends.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

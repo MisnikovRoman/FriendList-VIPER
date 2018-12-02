@@ -10,4 +10,8 @@ import Foundation
 
 class FriendListInteractor: IFriendListInteractor {
     var presenter: IFriendListPresenter?
+    
+    func fetchFriends() {
+        print("Interactor is loading friends list...")
+    }
 }
