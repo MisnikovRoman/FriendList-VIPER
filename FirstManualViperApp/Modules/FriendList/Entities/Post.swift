@@ -1,5 +1,5 @@
 //
-//  IFriendListView.swift
+//  Post.swift
 //  FirstManualViperApp
 //
 //  Created by MisnikovRoman on 02/12/2018.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol IFriendListView: class {
-    var presenter: IFriendListPresenter? { get set }
-    func show(friendList: [Friend])
+typealias Posts = [PostElement]
+
+struct PostElement: Decodable {
+    let user, id: Int
+    let title, body: String
 }

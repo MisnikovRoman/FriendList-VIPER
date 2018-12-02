@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Friend {
-    var name: String
-    var number: String
+typealias Friends = [Friend]
+
+struct Friend: Decodable {
+    let name: String
+    let number: Int
 }

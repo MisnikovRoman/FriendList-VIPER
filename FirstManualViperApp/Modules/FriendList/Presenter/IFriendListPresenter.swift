@@ -8,9 +8,10 @@
 
 import Foundation
 
-protocol IFriendListPresenter {
+protocol IFriendListPresenter: class {
     var view: IFriendListView? { get set }
     var interactor: IFriendListInteractor? { get set }
     var router: IFriendListRouter? { get set }
     func viewDidLoad()
+    func friendListDidFetch(_ friendList: [Friend])
 }

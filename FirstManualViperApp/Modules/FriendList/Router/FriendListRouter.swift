@@ -11,14 +11,16 @@ import UIKit
 class FriendListRouter: IFriendListRouter {
     static func createModule() -> UIViewController & IFriendListView {
         
-        var presenter: IFriendListPresenter = FriendListPresenter()
-        presenter.interactor = FriendListInteractor()
-        presenter.router = FriendListRouter()
+        let presenter: IFriendListPresenter = FriendListPresenter()
+        let interactor = FriendListInteractor()
+        interactor.presenter = presenter
         
         let view = FriendListView()
         view.presenter = presenter
         
         presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = FriendListRouter()
         
         return view
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IFriendListInteractor {
+protocol IFriendListInteractor: class {
     var presenter: IFriendListPresenter? { get set }
     func fetchFriends()
 }

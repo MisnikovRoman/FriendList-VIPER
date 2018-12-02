@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE8D7BFF21B43EEB00144EA0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D7BFE21B43EEB00144EA0 /* Post.swift */; };
+		CE8D7C0121B43F3100144EA0 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8D7C0021B43F3100144EA0 /* posts.json */; };
 		CEE83CD721B4109400607AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE83CD621B4109400607AE0 /* AppDelegate.swift */; };
 		CEE83CDC21B4109400607AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE83CDA21B4109400607AE0 /* Main.storyboard */; };
 		CEE83CDE21B4109600607AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE83CDD21B4109600607AE0 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE8D7BFE21B43EEB00144EA0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CE8D7C0021B43F3100144EA0 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		CEE83CD321B4109400607AE0 /* FirstManualViperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstManualViperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE83CD621B4109400607AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE83CDB21B4109400607AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				CEE83CD621B4109400607AE0 /* AppDelegate.swift */,
 				CEE83CDA21B4109400607AE0 /* Main.storyboard */,
 				CEE83D0221B41FE600607AE0 /* friends.json */,
+				CE8D7C0021B43F3100144EA0 /* posts.json */,
 				CEE83CE921B410C400607AE0 /* Modules */,
 				CEE83CE821B410B300607AE0 /* Supporting files */,
 			);
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE83CFA21B4134D00607AE0 /* Friend.swift */,
+				CE8D7BFE21B43EEB00144EA0 /* Post.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE83CE121B4109600607AE0 /* LaunchScreen.storyboard in Resources */,
+				CE8D7C0121B43F3100144EA0 /* posts.json in Resources */,
 				CEE83CDE21B4109600607AE0 /* Assets.xcassets in Resources */,
 				CEE83CDC21B4109400607AE0 /* Main.storyboard in Resources */,
 				CEE83D0321B41FE600607AE0 /* friends.json in Resources */,
@@ -228,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE83CF921B4134300607AE0 /* IFriendListPresenter.swift in Sources */,
+				CE8D7BFF21B43EEB00144EA0 /* Post.swift in Sources */,
 				CEE83CFB21B4134D00607AE0 /* Friend.swift in Sources */,
 				CEE83D0121B415A200607AE0 /* FriendListInteractor.swift in Sources */,
 				CEE83CFF21B414B000607AE0 /* FriendListPresenter.swift in Sources */,

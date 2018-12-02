@@ -11,6 +11,7 @@ import UIKit
 class FriendListView: UIViewController {
     
     var presenter: IFriendListPresenter?
+    var viewData: [Friend] = Array<Friend>()
     
     let tableView = UITableView()
     
@@ -34,8 +35,9 @@ class FriendListView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FriendCell")
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
@@ -44,7 +46,10 @@ class FriendListView: UIViewController {
 }
 
 extension FriendListView: IFriendListView {
-    
+    func show(friendList: [Friend]) {
+        viewData = friendList
+        tableView.reloadData()
+    }
 }
 
 extension FriendListView: UITableViewDelegate {
@@ -53,10 +58,12 @@ extension FriendListView: UITableViewDelegate {
 
 extension FriendListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        cell.textLabel?.text = viewData[indexPath.row].name
+        return cell
     }
 }

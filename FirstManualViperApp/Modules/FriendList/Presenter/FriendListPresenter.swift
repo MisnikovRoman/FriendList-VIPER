@@ -9,11 +9,16 @@
 import Foundation
 
 class FriendListPresenter: IFriendListPresenter {
+    
     weak var view: IFriendListView?
     var interactor: IFriendListInteractor?
     var router: IFriendListRouter?
     
     func viewDidLoad() {
         interactor?.fetchFriends()
+    }
+    
+    func friendListDidFetch(_ friendList: [Friend]) {
+        view?.show(friendList: friendList)
     }
 }
