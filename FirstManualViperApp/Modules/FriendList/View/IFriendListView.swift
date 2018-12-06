@@ -10,5 +10,5 @@ import Foundation
 
 protocol IFriendListView: class {
     var presenter: IFriendListPresenter? { get set }
-    func show(friendList: [Friend])
+    func show(friendList: [FriendViewData])
 }

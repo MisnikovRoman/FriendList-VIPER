@@ -19,6 +19,16 @@ class FriendListPresenter: IFriendListPresenter {
     }
     
     func friendListDidFetch(_ friendList: [Friend]) {
-        view?.show(friendList: friendList)
+        let friendsToView = prepareFriendsModelToView(friends: friendList)
+        view?.show(friendList: friendsToView)
+    }
+    
+    private func prepareFriendsModelToView(friends: Friends) -> [FriendViewData] {
+        let friendsViewData = friends.map({ (friend) -> FriendViewData in
+            let name = friend.name
+            let stringNumber = "+7 \(friend.number - 70000000000)"
+            return FriendViewData(name: name, number: stringNumber)
+        })
+        return friendsViewData
     }
 }

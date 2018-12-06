@@ -11,7 +11,7 @@ import UIKit
 class FriendListView: UIViewController {
     
     var presenter: IFriendListPresenter?
-    var viewData: [Friend] = Array<Friend>()
+    var viewData = Array<FriendViewData>()
     
     let tableView = UITableView()
     
@@ -46,7 +46,7 @@ class FriendListView: UIViewController {
 }
 
 extension FriendListView: IFriendListView {
-    func show(friendList: [Friend]) {
+    func show(friendList: [FriendViewData]) {
         viewData = friendList
         tableView.reloadData()
     }
@@ -62,8 +62,11 @@ extension FriendListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "FriendCell")
+        
         cell.textLabel?.text = viewData[indexPath.row].name
+        cell.detailTextLabel?.text = viewData[indexPath.row].number
         return cell
     }
 }

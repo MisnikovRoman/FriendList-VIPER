@@ -14,3 +14,8 @@ struct Friend: Decodable {
     let name: String
     let number: Int
 }
+
+struct FriendViewData {
+    let name: String
+    let number: String
+}
